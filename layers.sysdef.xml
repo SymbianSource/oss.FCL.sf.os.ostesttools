@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE SystemDefinition SYSTEM "sysdef_1_4_0.dtd" [
+  <!ENTITY layer_real_source_path "sf/os/ostesttools" >
+]>
+
+<SystemDefinition name="ostesttools" schema="1.4.0">
+  <systemModel>
+    <layer name="os_layer">
+      <module name="hti">
+        <unit unitID="testtools.hti" mrp="" bldFile="&layer_real_source_path;/hti/group" name="hti" />
+      </module>
+      <module name="stif">
+        <unit unitID="testtools.stif" mrp="" bldFile="&layer_real_source_path;/stif/group" name="stif" />
+      </module>
+    </layer>
+  </systemModel>
+</SystemDefinition>
