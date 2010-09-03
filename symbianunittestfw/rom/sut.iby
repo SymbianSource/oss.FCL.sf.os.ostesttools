@@ -28,7 +28,7 @@ extension[VARID]==ABI_DIR\BUILD_DIR\symbianunittestldd.dll		    sys\bin\symbianu
 file=ABI_DIR\BUILD_DIR\symbianunittest.exe                  sys\bin\symbianunittest.exe
 
 // unit test example
-file=ABI_DIR\BUILD_DIR\ut_racecar.dll                       sys\bin\ut_racecar.dll
+//file=ABI_DIR\BUILD_DIR\ut_racecar.dll                       sys\bin\ut_racecar.dll
 
 #endif __SUT_IBY__
 
