@@ -1,3 +1,0 @@
-EXPORTS
-	?CreateWrapperInstanceL@@YAPAVCWrapperUtilsPlugin@@XZ @ 1 NONAME ; class CWrapperUtilsPlugin * CreateWrapperInstanceL(void)
-

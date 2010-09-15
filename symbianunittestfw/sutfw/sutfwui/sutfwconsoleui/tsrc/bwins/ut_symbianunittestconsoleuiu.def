@@ -1,3 +1,0 @@
-EXPORTS
-	?CreateTestL@@YAPAVMSymbianUnitTestInterface@@XZ @ 1 NONAME ; class MSymbianUnitTestInterface * CreateTestL(void)
-

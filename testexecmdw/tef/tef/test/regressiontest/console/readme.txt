@@ -1,1 +1,0 @@
-console test. PIPS or eshell. but now this part can't run automation test.
