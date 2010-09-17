@@ -7,18 +7,18 @@
   <systemModel>
     <layer name="os_layer">
       <module name="hti">
-        <unit unitID="testtools.hti" mrp="" bldFile="&layer_real_source_path;/hti/group" name="hti" />
+        <unit unitID="testtools.hti" mrp="" bldFile="&layer_real_source_path;/testconns/hti/group" name="hti" />
       </module>
       <module name="stif">
-        <unit unitID="testtools.stif" mrp="" bldFile="&layer_real_source_path;/stif/group" name="stif" />
+        <unit unitID="testtools.stif" mrp="" bldFile="&layer_real_source_path;/testfws/stif/group" name="stif" />
       </module>
     </layer>
     <layer name="os">
       <module name="testexecmdw">
-        <unit unitID="testtools.tef" mrp="" bldFile="&layer_real_source_path;/testexecmdw/tef/group" name="tef" />
+        <unit unitID="testtools.tef" mrp="" bldFile="&layer_real_source_path;/testfws/testexecmdw/group" name="tef" />
       </module>
       <module name="symbianunittestfw">
-        <unit unitID="testtools.sutfw" mrp="" bldFile="&layer_real_source_path;/symbianunittestfw/group" name="sutfw" />
+        <unit unitID="testtools.sutfw" mrp="" bldFile="&layer_real_source_path;/testfws/symbianunittestfw/group" name="sutfw" />
       </module>
     </layer>
   </systemModel>

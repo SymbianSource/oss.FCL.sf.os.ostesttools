@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDefinition schema="3.0.0">
+ <package id="ostesttools" name="OS Test Tools" levels="fw trace">
+  <collection id="testconns" name="Test Connectivity" level="trace">
+    <component id="hti" filter="s60" name="Harmonized Test Interface" purpose="development">
+      <unit bldFile="testconns/hti/group"/>
+    </component>
+  </collection>
+  <collection id="testfws" name="Test Frameworks" level="fw">
+    <component id="stif" filter="s60" name="STIF Test Framework" purpose="development">
+      <unit bldFile="testfws/stif/group"/>
+    </component>
+    <component id="tef" filter="s60" name="Test Execute Framework version 3" purpose="development">
+      <unit bldFile="testfws/testexecmdw/group"/>
+    </component>
+    <component id="symbianunittestfw" filter="s60" name="Symbian Unit Test Framework" introduced="^4" purpose="development">
+      <unit bldFile="testfws/symbianunittestfw/group"/>
+    </component>
+  </collection>
+ </package>
+</SystemDefinition>
