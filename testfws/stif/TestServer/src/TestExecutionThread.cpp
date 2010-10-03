@@ -2655,7 +2655,7 @@ TInt CTestThreadContainer::RemoveInterferenceThread(
 -------------------------------------------------------------------------------
 */
 TInt CTestThreadContainer::HandleMeasurementProcess( 
-            CSTIFTestMeasurement::TStifMeasurementStruct aSTIFMeasurementInfo )
+            const CSTIFTestMeasurement::TStifMeasurementStruct& aSTIFMeasurementInfo )
     {
     // Get access to test measurement stuff
 

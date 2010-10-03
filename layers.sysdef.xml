@@ -12,6 +12,15 @@
       <module name="stif">
         <unit unitID="testtools.stif" mrp="" bldFile="&layer_real_source_path;/testfws/stif/group" name="stif" />
       </module>
+      <module name="burtestserver">
+        <unit unitID="testtools.burtestserver" mrp="" bldFile="&layer_real_source_path;/testfws/burtestserver/Group" name="burtestserver" />
+      </module>
+      <module name="statapi">
+        <unit unitID="testtools.statapi" mrp="" bldFile="&layer_real_source_path;/testconns/statapi/device/source/statapi/console" name="statapi" />
+      </module>
+      <module name="statdesktop">
+        <unit unitID="testtools.statdesktop" mrp="" bldFile="&layer_real_source_path;/testconns/statdesktop/desktop/group" name="statdesktop" />
+      </module>
     </layer>
     <layer name="os">
       <module name="testexecmdw">

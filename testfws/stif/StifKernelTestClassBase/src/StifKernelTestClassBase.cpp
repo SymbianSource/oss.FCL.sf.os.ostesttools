@@ -168,8 +168,6 @@ TInt DStifKernelTestClassBase::DoControl(
             TStifRunMethodInfo methodInfo;
             TPckg<TStifRunMethodInfo> methodInfoPckg( methodInfo );
 
-            TInt err = KErrNone;
-                                                          
             ret = Kern::ThreadDesRead( iThread, a1, methodInfoPckg, 0, KChunkShiftBy0 );
             if( ret != KErrNone )
                 {
@@ -183,13 +181,7 @@ TInt DStifKernelTestClassBase::DoControl(
             // seems to allow leaves (L in the end of the name), it really doesn't!
             ret = RunMethodL( methodInfo.iMethodName, methodInfo.iMethodParams );                                           
                                      
-            if( err != KErrNone )
-                {
-                methodInfo.iResult = err;
-                methodInfo.iMethodResultDes.Copy( _L("RunMethodL leave: ") );
-                methodInfo.iMethodResultDes.AppendNum( err );
-                }
-            else if( ret != KErrNone )
+            if( ret != KErrNone )
                 {
                 methodInfo.iResult = ret;
                 methodInfo.iMethodResultDes.Copy( _L("RunMethodL returned error: ") );

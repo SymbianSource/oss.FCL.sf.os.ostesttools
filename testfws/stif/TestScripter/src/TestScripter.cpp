@@ -1751,7 +1751,7 @@ CTestRunner::~CTestRunner()
 void CTestRunner::RunL()
     {
     __TRACEFUNC();
-    __TRACE( KMessage, (_L("CTestRunner::RunL: [%d] "), iStatus.Int() ));
+	__TRACE( KMessage, (_L("CTestRunner::RunL: [%d] "), iStatus.Int() ));
      
     // Check if we need to Pause test case again  
     if( iStatus == KErrNone && iRemainingTimeValue > 0 )
@@ -5111,7 +5111,11 @@ TInt TTestObjectKernel::RunMethodL( CStifItemParser& aItem )
     TPtrC params;
     
     User::LeaveIfError( aItem.GetNextString( method ) );
-    aItem.Remainder( params );
+    TInt ret = aItem.Remainder( params );
+	if ( ret != KErrNone )
+		{
+		RDebug::Print( _L("No parameters given in test class method call") );
+		}
     
     TInt result;
     TMethodResultDes resultDes;
@@ -5126,7 +5130,7 @@ TInt TTestObjectKernel::RunMethodL( CStifItemParser& aItem )
     TPtr8 par8 = myBuf2->Des();   
     par8.Copy( params );
     
-    TInt ret =  iTestClass.RunMethod( met8, par8, result, resultDes );
+    ret =  iTestClass.RunMethod( met8, par8, result, resultDes );
 
     delete myBuf1;
     delete myBuf2;

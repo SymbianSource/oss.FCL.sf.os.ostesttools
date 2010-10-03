@@ -1586,7 +1586,7 @@ NONSHARABLE_CLASS( CMeasurementHandler )
 * Check is module TestScripter. Does parsing and returns new module name and
 * error codes(Needed operations when creating server sessions to TestScripter).
 */
-TInt CheckModuleName( TFileName aModuleName, TFileName& aNewModuleName );
+TInt CheckModuleName( const TFileName& aModuleName, TFileName& aNewModuleName );
 
 /**
 * Remove optional index appended to module name.

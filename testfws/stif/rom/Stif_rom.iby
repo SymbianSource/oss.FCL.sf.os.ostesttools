@@ -20,7 +20,7 @@
 
 #if defined(__S60_)
 // For kernel testing support, uncomment the following line
-device[VARID]=ABI_DIR\BUILD_DIR\StifKernelTestClassBase.dll  SHARED_LIB_DIR\StifKernelTestClassBase.dll
+device[VARID]=ABI_DIR/BUILD_DIR/StifKernelTestClassBase.dll  SHARED_LIB_DIR/StifKernelTestClassBase.dll
 #endif
 
 #endif

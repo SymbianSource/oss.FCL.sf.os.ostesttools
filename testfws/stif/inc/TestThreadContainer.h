@@ -213,7 +213,7 @@ class CTestThreadContainer
         * to TestServer space.
         */ 
         virtual TInt HandleMeasurementProcess(
-                    CSTIFTestMeasurement::TStifMeasurementStruct aSTIFMeasurementInfo );
+                    const CSTIFTestMeasurement::TStifMeasurementStruct& aSTIFMeasurementInfo );
 
         /**
         * Completes a command request.

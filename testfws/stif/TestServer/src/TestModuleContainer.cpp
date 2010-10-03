@@ -2272,7 +2272,7 @@ TInt CErrorPrintHandler::RunError( TInt aError )
 
 -------------------------------------------------------------------------------
 */
-TInt CheckModuleName( TFileName aModuleName, TFileName& aNewModuleName )
+TInt CheckModuleName( const TFileName& aModuleName, TFileName& aNewModuleName )
     {
 //--PYTHON-- old code has been replaced with the new one
 /*

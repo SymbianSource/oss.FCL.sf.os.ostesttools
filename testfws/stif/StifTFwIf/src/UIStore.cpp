@@ -2119,7 +2119,7 @@ void CUIStore::SaveTestSetL( CTestSetInfo& aSetInfo, const TDesC& aSetFileName )
         CleanupClosePushL(file);
         
         RBuf buffer;
-        buffer.Create(256);
+        buffer.CreateL(256);
         CleanupClosePushL(buffer);
         
         // Saving
@@ -2227,7 +2227,7 @@ void CUIStore::UpdateTestSetL(CTestSetInfo& aSetInfo, const TDesC& aSetFileName)
 
         //Search for line
         RBuf buffer;
-        buffer.Create(256);
+        buffer.CreateL(256);
         CleanupClosePushL(buffer);
 
         //Prepare file
@@ -2256,7 +2256,7 @@ void CUIStore::UpdateTestSetL(CTestSetInfo& aSetInfo, const TDesC& aSetFileName)
             // Position was found. Just update that line (save index of last 
             // started test case)
             RBuf8 b;
-            b.Create(40);
+            b.CreateL(40);
             CleanupClosePushL(b);
 
             b.Copy(KUIStoreLastStartedCaseIndex);
@@ -2351,7 +2351,7 @@ void CUIStore::WriteLineL(RFile &file, const TDesC& buffer)
         {
         // Create 8-bit buffer
         RBuf8 buf;
-        buf.Create(buffer.Length());
+        buf.CreateL(buffer.Length());
         CleanupClosePushL(buf);
     
         buf.Copy(buffer);

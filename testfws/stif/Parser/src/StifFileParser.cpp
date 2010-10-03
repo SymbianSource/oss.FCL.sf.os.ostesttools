@@ -592,7 +592,7 @@ HBufC* CStifFileParser::NextSectionL(const TDesC& aStartTag,
 	CleanupStack::PushL(withoutCommentsBuf);
 	TPtr withoutCommentsBufPtr(withoutCommentsBuf->Des());
 
-	HBufC* endOfLine = HBufC::NewL(2);  //After reading a line it contains 0D0A or 0A or null (how readed line is ended)
+	HBufC* endOfLine = HBufC::NewL(8);  //After reading a line it contains 0D0A or 0A or null (how readed line is ended)
 	CleanupStack::PushL(endOfLine);
 	TPtr endOfLinePtr(endOfLine->Des());
 

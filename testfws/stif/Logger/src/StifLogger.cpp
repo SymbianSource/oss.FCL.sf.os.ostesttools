@@ -485,12 +485,30 @@ void CStifLogger::OverwriteLoggerSettings( TLoggerSettings& aLoggerSettings,
                         ( aLoggerSettings.iHardwarePath.Length() -1 ), 1 );
                     }
                 }
-            // Removes drive letter if given and appends implemented path 
-            TParse parse;
-            parse.Set( aTestPath, NULL, NULL );
-            // Path() return value starts with '\'
-            newPath.Append( parse.Path() );
-            aTestPath = newPath;
+            ret = aTestPath.LocateReverse(92);
+                        // Is '\' character founded
+                             
+           if (ret != KErrNotFound)
+                {
+                // Is '\' last character
+                if (ret == (aTestPath.Length() - 1))
+                     {
+                     // delete last '\'
+                     aTestPath.Delete((aTestPath.Length()- 1), 1);
+                     }
+                }
+             ret = aTestPath.LocateReverse('\\');
+               
+             //cut logger specyfic directory (like: \\Demomodule)
+                           
+             aTestPath = aTestPath.Right(aTestPath.Length()-ret);
+                     
+             // patch must end with '\'
+             aTestPath.Append('\\');
+                       
+             // create path by combining path form .ini file with test module name
+             newPath.Append(aTestPath);                                             
+             aTestPath = newPath;
             }
         if( aLoggerSettings.iIsDefined.iHwFormat )
             {
@@ -529,11 +547,28 @@ void CStifLogger::OverwriteLoggerSettings( TLoggerSettings& aLoggerSettings,
                         ( aLoggerSettings.iEmulatorPath.Length() -1 ), 1 );
                     }
                 }
-            // Removes drive letter if given and appends implemented path
-            TParse parse;
-            parse.Set( aTestPath, NULL, NULL );
-            // Path() return value starts with '\'
-            newPath.Append( parse.Path() );
+            
+                ret = aTestPath.LocateReverse(92);
+                        // Is '\' character founded
+                             
+                       if (ret != KErrNotFound)
+                            {
+                            // Is '\' last character
+                            if (ret == (aTestPath.Length() - 1))
+                                {
+                                // delete last '\'
+                                aTestPath.Delete((aTestPath.Length()- 1), 1);
+                                }
+                            }
+            ret = aTestPath.LocateReverse('\\');
+                       
+            //cut logger specyfic directory (like: \\Demomodule)      
+            aTestPath = aTestPath.Right(aTestPath.Length()-ret);                       
+            // patch must end with '\'
+            aTestPath.Append('\\'); 
+               
+            // create path by combining path form .ini file with test module name
+            newPath.Append(aTestPath);                                                          
             aTestPath = newPath;
             }
         if( aLoggerSettings.iIsDefined.iFormat )
